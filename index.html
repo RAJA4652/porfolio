@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja Babu | Flutter Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 10%;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    z-index:1000;
+}
+
+nav h2{
+    color:#00e0ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00e0ff;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding-top:80px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.highlight{
+    color:#00e0ff;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.buttons a{
+    text-decoration:none;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#00e0ff;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    margin:10px;
+}
+
+/* 3D CUBE */
+.cube-container{
+    margin-top:40px;
+    perspective:1000px;
+}
+
+.cube{
+    width:150px;
+    height:150px;
+    position:relative;
+    transform-style:preserve-3d;
+    animation:rotate 10s infinite linear;
+}
+
+.cube div{
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:rgba(0,224,255,0.2);
+    border:2px solid #00e0ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600;
+    font-size:18px;
+}
+
+.front  { transform: translateZ(75px); }
+.back   { transform: rotateY(180deg) translateZ(75px); }
+.right  { transform: rotateY(90deg) translateZ(75px); }
+.left   { transform: rotateY(-90deg) translateZ(75px); }
+.top    { transform: rotateX(90deg) translateZ(75px); }
+.bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+@keyframes rotate{
+    from{ transform: rotateX(0) rotateY(0); }
+    to{ transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* SECTIONS */
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:15px;
+    margin:20px 0;
+    backdrop-filter: blur(10px);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Raja.</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Hi, I'm <span class="highlight">Raja Babu</span></h1>
+    <p>Flutter Developer | App Development Enthusiast</p>
+
+    <div class="buttons">
+        <a href="https://github.com/RAJA4652" target="_blank">
+            <button class="btn">GitHub</button>
+        </a>
+
+        <a href="https://www.linkedin.com/in/raja-babu-kumar-a49858373" target="_blank">
+            <button class="btn">LinkedIn</button>
+        </a>
+    </div>
+
+    <!-- 3D Rotating Cube -->
+    <div class="cube-container">
+        <div class="cube">
+            <div class="front">Flutter</div>
+            <div class="back">Dart</div>
+            <div class="right">Python</div>
+            <div class="left">Android</div>
+            <div class="top">Web</div>
+            <div class="bottom">iOS</div>
+        </div>
+    </div>
+</div>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+        1st Year B.Tech student at Gulzar Group of Institutes.
+        Passionate about building scalable mobile & web applications using Flutter.
+        Seeking internship to work on real-world production-level projects.
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="card">
+        Flutter • Dart • Android • iOS • Web • Firebase • Python (Basics)
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card">
+        <h3>StudyBot</h3>
+        <p>Student skill-learning marketplace platform.</p>
+    </div>
+
+    <div class="card">
+        <h3>Verifact</h3>
+        <p>Verification-based application under development.</p>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="card">
+        Email: rb3741110@gmail.com <br><br>
+        GitHub: https://github.com/RAJA4652 <br><br>
+        LinkedIn: raja-babu-kumar
+    </div>
+</section>
+
+<footer>
+    © 2026 Raja Babu | Portfolio
+</footer>
+
+</body>
+</html>
